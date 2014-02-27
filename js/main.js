@@ -23,6 +23,8 @@ var states = Object.freeze({
    ScoreScreen: 2
 });
 
+var expertmode = false;
+
 var currentstate;
 
 var gravity = 0.25;
@@ -58,6 +60,8 @@ $(document).ready(function() {
       debugmode = true;
    if(window.location.search == "?easy")
       pipeheight = 200;
+   if(window.location.search == "?hard")
+      pipeheight = 500;
    
    //get the highscore
    var savedscore = getCookie("highscore");
